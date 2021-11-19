@@ -11,7 +11,14 @@ Options:
 """ 
 
 from docopt import docopt
-opt = docopt(__doc__)
-print(opt)
-print(type(opt))
-print(opt['--arg4'])
+
+
+def main(opt_):
+    print(opt_)
+    print(type(opt_))
+    print(opt_['--arg4'])
+
+
+if __name__ == "__main__":
+    opt = docopt(__doc__)
+    main(opt)
